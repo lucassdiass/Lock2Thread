@@ -1,0 +1,15 @@
+O capítulo 2 do livro "the art of multiprocessor programming"  aborda o conceito de exclusão mútua. Esse conceito é definido como a garantia que em uma seção crítica uma thread vai acessada por vez. Além disso, o capítulo apresenta 3 algoritmos de exclusão mútua para 2 threads.
+
+ Algoritmo 1 - LockOne - A thread que deseja acessar a seção crítica sinaliza que deseja entrar e espera até que outra  sinalize a liberação. Entretanto, se duas threads chegarem "juntos", uma irá esperar pela outra e ocorrerá Deadlock.
+
+Algoritmo 2 - LockTwo - A thread que deseja entrar na seção crítica da a preferência para a outra thread e espera essa última liberar o acesso. Esse algoritmo tem o problema de que se apenas uma thread desejar entrar na seção crítica, essa thread entra em deadlock, esperando a próxima.
+
+Algoritmo 3 - Peterson Lock - Mescla dos algoritimos 1 e 2. Evita que as threads entre em deadlock esperando a outra thread e quando tentem acessar "junto" a seção crítica. Dessa forma, ele resolve os deadlocks do algoritmo 1 com o algoritmo 2 e vice-versa. 
+
+
+A implementação se encontra com nomes de LockOne, LockTwo e PetersonLock
+
+
+
+
+
